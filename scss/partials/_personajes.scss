@@ -1,0 +1,109 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&family=Roboto+Mono:wght@100&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.header-personajes{
+    @include header;
+
+    .nav-container2{
+        height: 49vh;
+        width: 1500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+    .nav-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1500px;
+        height: 50vh;
+
+        .nav-titulo{
+            display: flex;
+            justify-content: start;
+            width: 50%;
+            color: $gris;
+            font-family: $font2;
+            font-size: 50px;
+            padding: 20px;
+            line-height: 120px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .nav-lista{
+            display: flex;
+            justify-content: end;
+            width: 50%;
+    }
+
+        ul{
+            list-style: none;
+        }
+
+        .lista{
+            display: flex;
+            justify-items: end;
+            font-family: $font1;
+            padding: 20px;
+
+            .li{
+                padding: 10px;
+
+            .a{
+                text-decoration: none;
+                color: $gris;
+                }
+            }
+        }
+    }
+}
+
+.section-container2{
+    height: 60vh;
+    width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main{
+    background-color: black;
+
+    .article-personajes{
+        padding: 20px;
+
+        h2{
+            @include titulos1;
+            color: $rojo;
+        }
+
+        .p-personajes{
+            @include textos2;
+        }
+    }
+
+    .personajes-container{
+        padding: 20px;
+    }
+
+    h4{
+        @include titulos2;
+    }
+
+    .p-supervivientes{
+        @include textos1;
+    }
+
+    .p-asesinos{
+        @include textos1;
+    }
+}
